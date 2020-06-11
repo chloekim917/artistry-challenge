@@ -1,0 +1,14 @@
+<h1>Artists And Their Instruments</h1>
+
+<%= form_for @ai do |f| %>
+
+<%= f.label :artist_id %>
+<%= f.collection_select :artist_id, Artist.all, :id, :name %>
+
+<%= f.label :instrument_id %>
+<%= f.collection_select :instrument_id, Instrument.all, :id, :name %>
+
+<%= f.submit %>
+<% end %>
+
+
